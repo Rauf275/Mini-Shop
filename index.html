@@ -1997,8 +1997,6 @@ function heroInnerHtml(){
       ${photo ? `<img class="hero-slide-img" src="${photo}" alt="banner">` : `<div class="hero-slide-fallback">${icon('image',48)}</div>`}
     </div>
     ${banners.length>1 ? `
-    <button class="hero-arrow prev" onclick="event.stopPropagation();bannerPrev()" aria-label="prev">${icon('chevLeft',22)}</button>
-    <button class="hero-arrow next" onclick="event.stopPropagation();bannerNext()" aria-label="next">${icon('chevRight',22)}</button>
     <div class="hero-dots">${banners.map((_,i)=>`<button class="hero-dot ${i===bannerIndex?'active':''}" onclick="event.stopPropagation();gotoBannerSlide(${i})" aria-label="slide ${i+1}"></button>`).join('')}</div>
     ` : ''}
   `;
